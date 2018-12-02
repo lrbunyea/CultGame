@@ -242,6 +242,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   nameText: {fileID: 724282142}
+  main: {fileID: 519420028}
   WerewolfCharacter: {fileID: 1691986632781726, guid: ef5c4532d0b333247a7693bcdcc27bde,
     type: 2}
   SnowInstructorCharacter: {fileID: 1185544854673114, guid: 76496f5a30d52ea498e6fe0b782c3aa6,
@@ -4584,7 +4585,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: 
 --- !u!222 &724282143
 CanvasRenderer:
   m_ObjectHideFlags: 0

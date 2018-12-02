@@ -9,6 +9,8 @@ public class GameManager : MonoBehaviour {
     public static GameManager Instance;
 
     [SerializeField] Text nameText;
+
+    [SerializeField] GameObject main;
     
     [SerializeField] GameObject WerewolfCharacter;
     [SerializeField] GameObject SnowInstructorCharacter;
@@ -73,13 +75,16 @@ public class GameManager : MonoBehaviour {
     {
         if (currentMonster == SelectedMonster.Werewolf)
         {
-            Instantiate(WerewolfCharacter);
+            GameObject character = Instantiate(WerewolfCharacter);
+            main.transform.SetParent(character.transform);
         } else if (currentMonster == SelectedMonster.SnowInstructor)
         {
-            Instantiate(SnowInstructorCharacter);
+            GameObject character = Instantiate(SnowInstructorCharacter);
+            main.transform.SetParent(character.transform);
         } else if (currentMonster == SelectedMonster.Leprechaun)
         {
-            Instantiate(LeprechaunCharacter);
+            GameObject character = Instantiate(LeprechaunCharacter);
+            main.transform.SetParent(character.transform);
         }
     }
 
