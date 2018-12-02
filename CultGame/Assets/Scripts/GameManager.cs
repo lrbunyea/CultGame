@@ -5,6 +5,10 @@ using UnityEngine;
 public class GameManager : MonoBehaviour {
 
     public static GameManager Instance;
+    
+    [SerializeField] GameObject WerewolfCharacter;
+    [SerializeField] GameObject SnowInstructorCharacter;
+    [SerializeField] GameObject LeprechaunCharacter;
 
     private GameState currentState;
     private SelectedMonster currentMonster;
@@ -58,5 +62,20 @@ public class GameManager : MonoBehaviour {
     public void SetSelectedMonster(SelectedMonster selected)
     {
         currentMonster = selected;
+        UpdatePlayerCharacter();
+    }
+
+    public void UpdatePlayerCharacter()
+    {
+        if (currentMonster == SelectedMonster.Werewolf)
+        {
+            Instantiate(WerewolfCharacter);
+        } else if (currentMonster == SelectedMonster.SnowInstructor)
+        {
+            Instantiate(SnowInstructorCharacter);
+        } else if (currentMonster == SelectedMonster.Leprechaun)
+        {
+            Instantiate(LeprechaunCharacter);
+        }
     }
 }
