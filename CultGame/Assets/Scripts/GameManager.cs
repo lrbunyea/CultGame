@@ -1,10 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour {
 
     public static GameManager Instance;
+
+    [SerializeField] Text nameText;
     
     [SerializeField] GameObject WerewolfCharacter;
     [SerializeField] GameObject SnowInstructorCharacter;
@@ -77,5 +81,10 @@ public class GameManager : MonoBehaviour {
         {
             Instantiate(LeprechaunCharacter);
         }
+    }
+
+    public void AppendNameText(string givenText)
+    {
+        nameText.text = nameText.text + givenText;
     }
 }
